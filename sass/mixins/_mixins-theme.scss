@@ -1,0 +1,5 @@
+@mixin downtriangle( $color ) {
+	border-color: $color transparent transparent transparent;
+	border-width: 28px 138px 0px 138px;
+	border-style: solid;
+}

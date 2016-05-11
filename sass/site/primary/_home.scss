@@ -1,0 +1,111 @@
+.home {
+
+	.content-area {
+		padding : 0;
+		float 	: none;
+
+		@media only screen and (min-width: $bp__tablet) {
+			width 	: 69.5%;
+			float 	: left;
+		}
+	}
+
+	.widget-area {
+		@media only screen and (min-width: $bp__tablet) {
+			width: 27.89%;
+		}
+	}
+
+	.hentry {
+		margin-bottom: 0 !important;
+	}
+
+	.footer-wrap {
+		&:before,
+		&:after {
+			@media only screen and (min-width: $bp__tablet) and (max-width: $bp__home-sidebar) {
+				display: none;
+			}
+		}
+	}
+}
+
+.home-header-img {
+	margin-bottom: 0.5em;
+}
+
+.home-contact-link {
+	background-color: $darkbrown;
+	color 			: $light !important;
+	font-family 	: $font__serif;
+	text-transform 	: uppercase;
+	display 		: block;
+	text-decoration : none;
+	padding 		: 0.5em;
+	text-align 		: center;
+
+	&:hover {
+		color: $light !important;
+	}
+}
+
+.home-sidebar {
+	background-color: $darkbrown;
+	color 			: $light;
+	position 		: relative;
+
+	&:after {
+		display 	: block;
+		content 	: "";
+		position 	: absolute;
+		right 		: 0;
+		bottom 		: -28px;
+		z-index		: 2;
+		@include downtriangle( $darkbrown );
+
+		@media only screen and (min-width: $bp__tablet) and (max-width: $bp__home-sidebar) {
+			display: none;
+		}
+	}
+
+	@media only screen and (min-width: $bp__tablet) {
+		width 			: 29%;
+		float 			: right;
+		padding-bottom 	: 0.5em;
+	}
+
+	ul {
+		@extend %listreset;
+		columns: 2 225px;
+
+		ul {
+			margin-left: 1em;
+		}
+	}
+
+	a {
+		color 			: $light;
+		text-decoration : none;
+
+		&:hover {
+			color: $mustard;
+		}
+	}
+
+	h3 {
+		margin 			: 0;
+		background-color: $mustard;
+		color 			: $light;
+		text-align 		: center;
+		font-family 	: $font__serif;
+		text-transform 	: uppercase;
+		font-weight 	: normal;
+		font-size 		: 1.25em;
+		padding 		: 0.25em 0;
+		letter-spacing 	: 3px;
+	}
+}
+
+.side-content {
+	padding 	: 1em;
+}

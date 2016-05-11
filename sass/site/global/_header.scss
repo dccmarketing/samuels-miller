@@ -1,0 +1,53 @@
+.site-header {
+	// DO NOT ADD PADDING HERE! - it screws up menus
+	margin-bottom	: 0.75em;
+	margin-top 		: 0.75em;
+
+	@extend %clearafter;
+}
+
+.header-wrap {
+	background-color: $light;
+	overflow 		: auto;
+	text-align 		: center;
+
+	@media only screen and (min-width: $bp__header) {
+		padding : 0 1em !important;
+		height 	: 116px; // to vert center the contact info
+	}
+}
+
+.site-branding {
+	padding		: 0.5em;
+	margin		: 0 auto;
+
+	@media only screen and (min-width: $bp__header) {
+		padding 		: 0;
+		margin-left 	: 1em;
+		margin-bottom 	: 0.5em;
+		float 			: left;
+	}
+}
+
+.header-contact-info {
+
+	@media only screen and (min-width: $bp__header) {
+		float 		: right;
+		text-align 	: right;
+		@include vertcenter();
+	}
+
+	a {
+		color 			: $dark;
+		text-decoration : none;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.header-established {
+	color 			: $dusty;
+	text-transform 	: uppercase;
+}

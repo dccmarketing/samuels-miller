@@ -1,0 +1,128 @@
+.site-footer {
+	width 			: 100%;
+	float 			: left;
+	color 			: $navy;
+	margin-bottom 	: 0.5em;
+
+	a {
+		text-decoration : none;
+		text-transform 	: uppercase;
+		color 			: $navy;
+
+		&:hover {
+			color: $mustard;
+		}
+	}
+
+	ul {
+		@extend %listreset;
+	}
+
+	h3 {
+		text-transform 	: uppercase;
+		margin 			: 0;
+		font-size 		: 1.25em;
+	}
+}
+
+.footer-wrap {
+	background-color: $light;
+	position 		: relative;
+
+	&:before {
+		display 	: block;
+		content 	: "";
+		position 	: absolute;
+		right 		: 0;
+		top 		: -12px;
+		z-index 	: 1;
+		@include downtriangle( $light );
+	}
+
+	&:after {
+		display 	: block;
+		content 	: "";
+		position 	: absolute;
+		right 		: 0;
+		top 		: 0;
+		@include downtriangle( $paleyellow );
+	}
+}
+
+.footer-left {
+	width 			: 100%;
+	margin-bottom 	: 1em;
+
+	@media only screen and (min-width: $bp__menu_button+1) {
+		width 			: 160px;
+		margin-right 	: 1.5em;
+		border-right 	: 2px solid $mustard;
+		display 		: inline-block;
+		vertical-align 	: top;
+	}
+}
+
+.footer-right {
+	width 		: 100%;
+
+	@media only screen and (min-width: $bp__menu_button+1) {
+		width 			: auto;
+		display 		: inline-block;
+		vertical-align 	: top;
+	}
+
+	h4 {
+		margin 			: 0;
+		text-transform 	: uppercase;
+		font-size 		: 1em;
+	}
+
+	address {
+		margin 		: 0;
+		line-height : 1.2;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.address {
+	margin-bottom 	: 1em;
+
+	@media only screen and (min-width: $bp__footer-address) {
+		float 			: left;
+		margin-right 	: 1.5em;
+		margin-bottom 	: 0.5em;
+	}
+}
+
+.site-info {
+	text-align 		: center;
+	width 			: 100%;
+	overflow 		: auto;
+	font-size 		: 13px;
+	max-width 		: $size__max-width;
+	margin 			: 0 auto;
+	margin-bottom 	: 0.5em;
+	color 			: $navy;
+
+	a {
+		color 			: $navy;
+		text-decoration : none;
+	}
+}
+
+.copyright {
+	@media only screen and (min-width: $bp__menu_button+1) {
+		@include margcols( 3, 2 );
+		text-align: left;
+	}
+}
+
+.credits {
+	@media only screen and (min-width: $bp__menu_button+1) {
+		@include margcols( 3, 1 );
+		text-align: right;
+	}
+}

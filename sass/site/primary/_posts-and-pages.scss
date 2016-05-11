@@ -1,0 +1,123 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin 		: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.site-content {
+	width 			: 100%;
+	margin 			: 0 auto 0.75em;
+	max-width 		: $size__max-width;
+	background-color: $light;
+
+	a {
+		color 			: $mustard;
+		text-decoration : none;
+
+		&:hover {
+			color: $navy;
+		}
+	}
+}
+
+.content-area {
+	width 		: 100%;
+	float 		: left;
+	padding 	: 1em;
+	position 	: relative;
+
+	@media only screen and (min-width: $bp__tablet) {
+		width 	: 75%;
+		float 	: left;
+
+		&.sidebar-content {
+			float 	: right;
+			margin 	: 0;
+		}
+	}
+
+	table {
+
+		tr {
+
+			td {
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.type-page {
+
+	.page-title {
+		font-family : $font__serif;
+		margin 		: 0;
+	}
+
+}
+
+.contact-us {
+
+	.contact-email {
+		margin-bottom 	: $size__default-bot-marg;
+		display 		: block;
+	}
+
+	address {
+		margin: 0;
+	}
+
+	.location {
+		margin-bottom: $size__default-bot-marg;
+		@extend %clearafter;
+	}
+
+	.loc-name {
+		font-weight: bold;
+	}
+
+	.loc-info {
+		width: 100%;
+
+		@media only screen and (min-width: $bp__tablet) {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	.acf-map {
+		width 	: 100%;
+		height 	: 200px;
+
+		@media only screen and (min-width: $bp__tablet) {
+			width: 50%;
+			float: right;
+		}
+	}
+}
+
+
+
