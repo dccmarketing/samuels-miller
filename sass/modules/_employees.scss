@@ -1,0 +1,96 @@
+.page-template-page-employee,
+.single-staff_directory,
+.single-employee  {
+
+	.img-featured {
+		@media only screen and (min-width: $bp__menu-button+1) {
+			float 	: right;
+		}
+	}
+
+	.employee-content {
+		h4 {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.home {
+
+	.employee-list-wrap  {
+		margin-top 	: 0.25em;
+		padding 	: 0.5em;
+		text-align 	: center;
+	}
+
+	.list-employees {
+		display 		: flex;
+		flex-wrap 		: wrap;
+		justify-content : center;
+		list-style 		: none;
+		margin 			: 0;
+		padding 		: 0;
+	}
+
+	.employee {
+		display 	: inline-block;
+		margin 		: 0.25em;
+		min-width 	: calc( 25% - 0.5em );
+		text-align 	: center;
+
+		p {
+			margin: 0;
+		}
+
+		&:first-child:nth-last-child(3),
+		&:first-child:nth-last-child(3) ~ li,
+		&:first-child:nth-last-child(6),
+		&:first-child:nth-last-child(6) ~ li,
+		&:first-child:nth-last-child(9),
+		&:first-child:nth-last-child(9) ~ li,
+		&:first-child:nth-last-child(18),
+		&:first-child:nth-last-child(18) ~ li {
+			min-width: calc( 33% - 0.5em );
+		}
+
+		&:first-child:nth-last-child(5),
+		&:first-child:nth-last-child(5) ~ li,
+		&:first-child:nth-last-child(10),
+		&:first-child:nth-last-child(10) ~ li,
+		&:first-child:nth-last-child(15),
+		&:first-child:nth-last-child(15) ~ li,
+		&:first-child:nth-last-child(20),
+		&:first-child:nth-last-child(20) ~ li {
+			min-width: calc( 20% - 0.5em );
+		}
+	}
+
+	.employee-list-link {
+		display: block;
+	}
+
+	.employee-list-thumb {
+		height 	: 137.6px;
+		margin 	: 0 auto;
+		width 	: 120px;
+	}
+
+	.employee-list-name {
+		font-size 	: 0.85em;
+		text-align 	: center;
+	}
+}
+
+.page {
+	.employee {
+		margin-bottom: 0;
+
+		p {
+			margin: 0;
+		}
+	}
+}
